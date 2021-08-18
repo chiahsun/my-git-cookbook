@@ -1,0 +1,43 @@
+= My Git Cookbook
+:doctype: book
+:publication-type: book
+:toc: left
+:source-highlighter: highlight.js 
+:source-language: bash 
+:icons: font
+
+== Rebase and Merge
+
+Say your source branch is `feature/add_awesome_feature` and you want to rebase it on target branch, `main`, and merge to target branch
+
+1. Squash your commits (For example, there are 7 commits after branch point with main branch)
++
+[source]
+git rebase -i HEAD~7
+
+* Change branches other than the first to `s` (which means squash)
+
+2. Rebase on your target branch (e.g. main)
++
+[source]
+git rebase main
+
+3. Check out your target branch
++
+[source]
+git checkout main
+
+4. Merge your rebased branch to target branch
++
+[source]
+------
+git merge feature/add_awesome_feature
+------
+Since you already rebase your source branch, it would be fast-forward without creating new nodes.
+
+=== Reference
+
+https://backlog.com/git-tutorial/tw/stepup/stepup1_4.html[分支的合併]
+
+https://backlog.com/git-tutorial/tw/stepup/stepup2_8.html[使用 rebase 合併]
+
