@@ -6,6 +6,24 @@
 :source-language: bash 
 :icons: font
 
+== Github
+
+=== Generate personal access token
+
+https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to[Stackoverflow]
+
+1. Goto https://github.com/settings/tokens/new
+2. Select the token permissions, for example, `repo` (including repo::status ...) and then generate the token string
+3. Under your repository,
++
+[source, bash]
+git remote set-url origin https://<token_string>@github.com/<username>/<repo_name>
++
+where
+* `<token_string>` is the token string from the previous step
+* `<username>` is your Github username
+* `<repo_name>` is your Github repository name
+
 == Rebase and Merge
 
 Say your source branch is `feature/add_awesome_feature` and you want to rebase it on target branch, `main`, and merge to target branch
