@@ -59,3 +59,31 @@ https://backlog.com/git-tutorial/tw/stepup/stepup1_4.html[分支的合併]
 
 https://backlog.com/git-tutorial/tw/stepup/stepup2_8.html[使用 rebase 合併]
 
+
+== Unstage delete
+
+https://stackoverflow.com/questions/9477702/undo-delete-in-git[Stackoverflow]
+
+[source,bash]
+git checkout -f
+
+
+== Undo last commit and keep the change
+
+https://stackoverflow.com/questions/15772134/can-i-delete-a-git-commit-but-keep-the-changes[Stackoverflow]
+
+[source,bash]
+git reset HEAD^
+
+== Change last commit message
+
+https://backlog.com/git-tutorial/tw/stepup/stepup7_1.html[backlog]
+
+[source,bash]
+Commit --amend
+
+== Rename the folder with the same name in different cases
+
+[source,bash]
+git mv sampledir TEMP
+git mv TEMP SampleDir
