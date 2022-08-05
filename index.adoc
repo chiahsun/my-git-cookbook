@@ -75,12 +75,22 @@ https://stackoverflow.com/questions/15772134/can-i-delete-a-git-commit-but-keep-
 [source,bash]
 git reset HEAD^
 
-== Change last commit message
+== git commit --amend
+
+=== Change last commit message
 
 https://backlog.com/git-tutorial/tw/stepup/stepup7_1.html[backlog]
 
 [source,bash]
-Commit --amend
+git commit --amend
+
+=== Add files to last commit without changing the message
+
+https://stackoverflow.com/questions/40503417/how-can-i-add-a-file-to-the-last-commit-in-git[Stackoverflow]
+
+[source, bash]
+git add some-file-forgotten-to-add
+git commit --amend --no-edit
 
 == Rename the folder with the same name in different cases
 
